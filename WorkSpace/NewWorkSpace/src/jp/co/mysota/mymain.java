@@ -1,4 +1,4 @@
-﻿//このソースは、VstoneMagicによって自動生成されました。
+//このソースは、VstoneMagicによって自動生成されました。
 //ソースの内容を書き換えた場合、VstoneMagicで開けなくなる場合があります。
 package	jp.co.mysota;
 import	main.main.GlobalVariable;
@@ -467,6 +467,17 @@ public class mymain
 																														//@</OutputChild>
 
 	}																													//@<EndOfBlock/>
-	
+
+	//@<Separate/>
+	public void method4()																								//@<BlockInfo>jp.vstone.block.func,64,1408,192,1408,False,53,@</BlockInfo>
+	throws SpeechRecogAbortException {
+		if(!GlobalVariable.TRUE) throw new SpeechRecogAbortException("default");
+
+																														//@<OutputChild>
+		GlobalVariable.sotawish.Say((String)"あにょはせよ",MotionAsSotaWish.MOTION_TYPE_TALK,(int)11,(int)13,(int)11);		//@<BlockInfo>jp.vstone.block.talk.say,128,1408,128,1408,False,54,@</BlockInfo>
+																														//@<EndOfBlock/>
+																														//@</OutputChild>
+
+	}																													//@<EndOfBlock/>
 
 }
