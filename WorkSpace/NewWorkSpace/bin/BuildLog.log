@@ -1,0 +1,77 @@
+VstoneMagic Build&Execute Message Log
+BuildStart time:2016/11/25 19:52:41
+ビルドを開始します。
+C:\Program Files (x86)\VstoneMagic\jdk\bin\javac.exe  -d "C:\Users\清香\Desktop\VstoneMagic\WorkSpace\NewWorkSpace\bin"  -g  -cp ".;C:\Users\清香\VstoneMagicData\jar\core-2.2.jar;C:\Users\清香\VstoneMagicData\jar\gson-2.6.1.jar;C:\Users\清香\VstoneMagicData\jar\javase-2.2.jar;C:\Users\清香\VstoneMagicData\jar\jna-4.1.0.jar;C:\Users\清香\VstoneMagicData\jar\opencv-310.jar;C:\Users\清香\VstoneMagicData\jar\sotalib.jar;C:\Users\清香\VstoneMagicData\jar\SRClientHelper.jar"  -encoding UTF-8 "C:\Users\清香\Desktop\VstoneMagic\WorkSpace\NewWorkSpace\src\main\main.java" "C:\Users\清香\Desktop\VstoneMagic\WorkSpace\NewWorkSpace\src\jp\co\mysota\mymain.java" 
+
+正常にコンパイルできました。
+
+jarファイルの作成
+マニフェストファイルを作成します。
+jarファイルを作成します。
+C:\Program Files (x86)\VstoneMagic\jdk\bin\jar.exe cvfm NewWorkSpace.jar Manifest.mf main jp\co\mysota TestPackage
+マニフェストが追加されました
+main/を追加中です(入=0)(出=0)(0%格納されました)
+main/main$GlobalVariable.classを追加中です(入=1536)(出=757)(50%収縮されました)
+main/main.classを追加中です(入=2189)(出=1186)(45%収縮されました)
+jp/co/mysota/を追加中です(入=0)(出=0)(0%格納されました)
+jp/co/mysota/mymain.classを追加中です(入=7729)(出=3968)(48%収縮されました)
+TestPackage/を追加中です(入=0)(出=0)(0%格納されました)
+TestPackage/TestClass.classを追加中です(入=280)(出=210)(25%収縮されました)
+
+jarファイルを作成しました。
+
+送信ファイルの上書き確認
+
+スタートアップアプリケーションの停止
+echo "STOP_STARTUP" > /home/vstone/vstonemagic/menu.fifoロボットのSFTPへ接続します。
+192.168.1.43@root
+.
+
+
+ファイルの転送
+ロボットにファイルを転送します。
+Connect to 192.168.1.43@root...接続しました。
+ファイルの転送を開始します。
+Send':'NewWorkSpace.jar' completed
+
+
+アプリケーション登録用のアーカイブファイルを作成
+.
+ビルドが完了しました。
+
+
+jarファイルの実行
+ロボットのSSHへ接続します。
+192.168.1.43@root
+java -Dfile.encoding=UTF8 -Djava.library.path=/usr/local/share/OpenCV/java/  -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=8765 -jar NewWorkSpace.jar 2>&1 &ファイルの転送が完了しました。java -Dfile.encoding=UTF8 -Djava.library.path=/usr/local/share/OpenCV/java/  -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=8765 -jar NewWorkSpace.jar 2>&1 &
+[1;32mroot@edison:~$[m java -Dfile.encoding=UTF8 -Djava.library.path=/usr/local/share/OpenCV/java/  -Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=8765 -jar NewWorkSpace.jar 2>&1 &
+[1] 8952
+[1;32mroot@edison:~$[m Listening for transport dt_socket at address: 8765
+デバッグの準備ができました。
+
+jdbの実行
+デバッガを起動します。
+C:\Program Files (x86)\VstoneMagic\jdk\bin\jdb.exe -connect com.sun.jdi.SocketAttach:hostname=192.168.1.43,port=8765
+捕捉されないjava.lang.Throwableの設定遅延した捕捉されないjava.lang.Throwableの設定jdbの初期化中...デバッグ実行のスタンバイができました。
+> VMが開始されました: 現在のコール・スタックにフレームがありません[Info][SpeechRecog]SpeechRecog
+[Info][CRoboCamera]class jp.vstone.RobotLib.CSotaMotion
+[Info][CRobotSock]Connected server
+[Info][CRobotMotion]MasterCtrlPeriod 16666
+[Info][MotionAsSotaWish][Say][scene:talk]おっぱ～　あんにょん！ぽごしぽー！
+[Info][TextToSpeechSota][TTS_USE_CACHE] /var/sota/tts//1480070431671.wav
+[Info][CPlayWave]Play /var/sota/tts//1480070431671.wav
+[Info][CPlayWave]isEdison
+[Info][CPlayWave]play------- 8974
+[Info][MotionAsSotaWish]play 2860
+[Info][MotionAsSotaWish][play][talk] [2460sec]
+[Info][MotionAsSotaWish][Say][scene:talk]おぬるん　むを　へっそよ？
+[Info][TextToSpeechSota][TTS_USE_CACHE] /var/sota/tts//1480070218583.wav
+[Info][CPlayWave]Play /var/sota/tts//1480070218583.wav
+[Info][CPlayWave]isEdison
+[Info][CPlayWave]play------- 8979
+[Info][MotionAsSotaWish]play 2131
+[Info][MotionAsSotaWish][play][talk] [1731sec]
+main[1] > アプリケーションが終了しましたexitexit
+logout
+
+ロボットとの通信を切断しました。

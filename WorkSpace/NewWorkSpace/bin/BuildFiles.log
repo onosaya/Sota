@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BuildOmitCheck xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <javacPath>C:\Program Files (x86)\VstoneMagic\jdk\bin\javac.exe</javacPath>
+  <argument> -d "C:\Users\清香\Desktop\VstoneMagic\WorkSpace\NewWorkSpace\bin"  -g  -cp ".;C:\Users\清香\VstoneMagicData\jar\core-2.2.jar;C:\Users\清香\VstoneMagicData\jar\gson-2.6.1.jar;C:\Users\清香\VstoneMagicData\jar\javase-2.2.jar;C:\Users\清香\VstoneMagicData\jar\jna-4.1.0.jar;C:\Users\清香\VstoneMagicData\jar\opencv-310.jar;C:\Users\清香\VstoneMagicData\jar\sotalib.jar;C:\Users\清香\VstoneMagicData\jar\SRClientHelper.jar"  -encoding UTF-8 </argument>
+  <files>
+    <FileData>
+      <path>jp\co\mysota\mymain.java</path>
+      <timestamp>2016-11-25T19:52:38.1842332+09:00</timestamp>
+      <size>23827</size>
+      <ignore>false</ignore>
+    </FileData>
+    <FileData>
+      <path>TestPackage\TestClass.java</path>
+      <timestamp>2016-10-05T01:45:45.4522537+09:00</timestamp>
+      <size>582</size>
+      <ignore>true</ignore>
+    </FileData>
+  </files>
+</BuildOmitCheck>
